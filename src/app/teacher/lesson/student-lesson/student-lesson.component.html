@@ -1,8 +1,8 @@
 <div class="routerOutlet">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>
 <footer>
-  <a [routerLink]="['papers']" routerLinkActive="active">paper</a><br>
-  <!-- <a [routerLink]="['comments']" >comment</a><br> -->
-  <a [routerLink]="['more']" routerLinkActive="active">more</a><br>
+  <ng-container *ngFor="let tabLink of tabLinks">
+    <a [routerLink]="tabLink.paths" [queryParams]="tabLink.queryParams" [fragment]="tabLink.fragment" routerLinkActive="active">{{ tabLink.displayText }}</a><br>
+  </ng-container>
 </footer>

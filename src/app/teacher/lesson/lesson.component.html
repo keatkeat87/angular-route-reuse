@@ -5,9 +5,9 @@
   <div class="headerSpaceForFixed"></div>
   <header>
     <ng-container *ngFor="let studentLessonWithLink of studentLessonWithLinks">
-      <a [routerLink]="studentLessonWithLink.link" routerLinkActive="active">{{ studentLessonWithLink.studentLesson.Id }}</a>
+      <a [routerLink]="studentLessonWithLink.paths"
+        routerLinkActive="active">{{ studentLessonWithLink.studentLesson.Id }}</a>
     </ng-container>
   </header>
   <router-outlet></router-outlet>
 </ng-template>
-

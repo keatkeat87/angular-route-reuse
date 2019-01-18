@@ -6,6 +6,8 @@ import { TeacherLessonComponent } from './teacher/lesson/lesson.component';
 import { StudentLessonComponent } from './teacher/lesson/student-lesson/student-lesson.component';
 import { PapersComponent } from './teacher/lesson/student-lesson/papers/papers.component';
 import { MoreComponent } from './teacher/lesson/student-lesson/more/more.component';
+import { PaperDetailComponent } from './teacher/lesson/student-lesson/papers/paper-detail/paper-detail.component';
+import { PaperTabComponent } from './teacher/lesson/student-lesson/paper-tab/paper-tab.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'working-days' },
@@ -22,11 +24,23 @@ const routes: Routes = [
         component: StudentLessonComponent,
         data: { reuse: true, reuseParamKey: 'studentLessonsId' },
         children: [
-          {
-            path: 'papers',
-            component: PapersComponent, 
-            data: { reuse: true } 
-          },
+          { 
+            path : 'papers',
+            component : PaperTabComponent,
+            data: { reuse: true },
+            children : [
+              {
+                path: '',
+                component: PapersComponent,
+                data: { reuse: true } 
+              },
+              {
+                path: ':paperId',
+                component: PaperDetailComponent,
+                // data: { reuse: true, reuseParamKey: 'paperId' } 
+              }
+            ]
+          },         
           {
             path: 'more',
             component: MoreComponent, 

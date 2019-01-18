@@ -7,9 +7,11 @@ import { TeacherLessonComponent } from './lesson/lesson.component';
 import { StudentLessonComponent } from './lesson/student-lesson/student-lesson.component';
 import { PapersComponent } from './lesson/student-lesson/papers/papers.component';
 import { MoreComponent } from './lesson/student-lesson/more/more.component';
+import { PaperDetailComponent } from './lesson/student-lesson/papers/paper-detail/paper-detail.component';
+import { PaperTabComponent } from './lesson/student-lesson/paper-tab/paper-tab.component';
 
 @NgModule({
-  declarations: [WorkingDaysComponent, LessonsInDayComponent, TeacherLessonComponent, StudentLessonComponent, PapersComponent, MoreComponent],
+  declarations: [WorkingDaysComponent, LessonsInDayComponent, TeacherLessonComponent, StudentLessonComponent, PapersComponent, MoreComponent, PaperDetailComponent, PaperTabComponent],
   imports: [
     CommonModule,
     RouterModule
