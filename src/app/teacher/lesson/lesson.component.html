@@ -1,0 +1,11 @@
+<p *ngIf="firstLoading; else content">
+  loading...
+</p>
+<ng-template #content>
+  <ng-container *ngFor="let studentLessonWithLink of studentLessonWithLinks">
+    <a [routerLink]="studentLessonWithLink.link">{{ studentLessonWithLink.studentLesson.Id }}</a>
+    <br>
+  </ng-container>
+  <router-outlet></router-outlet>
+</ng-template>
+
