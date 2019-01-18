@@ -13,6 +13,8 @@ export class MoreComponent extends ReuseComponent  implements OnInit {
     this.componentName = 'MoreComponent';
    }
 
+   isShowContent = false;
+
   ngOnInit() {
     console.log('MoreComponent Init');
   }
