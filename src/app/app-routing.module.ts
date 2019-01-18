@@ -26,7 +26,7 @@ const routes: Routes = [
         children: [
           { 
             path : 'papers',
-            component : PaperTabComponent,
+            // component : PaperTabComponent,
             data: { reuse: true },
             children : [
               {

@@ -98,6 +98,7 @@ export class DefaultRouteReuseStrategy implements RouteReuseStrategy {
     if (result) {
       cache.detachedTree.componentRef.instance.onAttach();
       Promise.resolve().then(() => {
+        console.log('setscroll to', cache.scrollTop);
         this.viewportScroller.scrollToPosition([0, cache.scrollTop]);
       });
     }
