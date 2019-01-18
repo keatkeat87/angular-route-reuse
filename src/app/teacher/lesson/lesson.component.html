@@ -1,11 +1,13 @@
-<p *ngIf="firstLoading; else content">
-  loading...
-</p>
+<div *ngIf="firstLoading; else content" class="loading">
+  <p>loading....</p>
+</div>
 <ng-template #content>
-  <ng-container *ngFor="let studentLessonWithLink of studentLessonWithLinks">
-    <a [routerLink]="studentLessonWithLink.link">{{ studentLessonWithLink.studentLesson.Id }}</a>
-    <br>
-  </ng-container>
+  <div class="headerSpaceForFixed"></div>
+  <header>
+    <ng-container *ngFor="let studentLessonWithLink of studentLessonWithLinks">
+      <a [routerLink]="studentLessonWithLink.link" routerLinkActive="active">{{ studentLessonWithLink.studentLesson.Id }}</a>
+    </ng-container>
+  </header>
   <router-outlet></router-outlet>
 </ng-template>
 

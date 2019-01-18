@@ -1,6 +1,8 @@
-<router-outlet></router-outlet>
-<div>
-  <a [routerLink]="['papers']" >paper</a><br>
-  <!-- <a [routerLink]="['comments']" >comment</a><br> -->
-  <a [routerLink]="['more']" >more</a><br>
+<div class="routerOutlet">
+    <router-outlet></router-outlet>
 </div>
+<footer>
+  <a [routerLink]="['papers']" routerLinkActive="active">paper</a><br>
+  <!-- <a [routerLink]="['comments']" >comment</a><br> -->
+  <a [routerLink]="['more']" routerLinkActive="active">more</a><br>
+</footer>

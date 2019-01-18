@@ -13,6 +13,8 @@ export class PapersComponent extends ReuseComponent implements OnInit {
     this.componentName = 'PapersComponent';
    }
 
+   isShowContent = false;
+
   ngOnInit() {
     console.log('PapersComponent Init');
   }
