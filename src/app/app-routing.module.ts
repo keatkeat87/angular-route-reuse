@@ -20,7 +20,7 @@ const routes: Routes = [
       {
         path: ':studentLessonsId',
         component: StudentLessonComponent,
-        data: { reuse: true, paramMapKey: 'studentLessonsId' },
+        data: { reuse: true, reuseParamKey: 'studentLessonsId' },
         children: [
           {
             path: 'papers',

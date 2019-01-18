@@ -34,9 +34,9 @@ export class DefaultRouteReuseStrategy implements RouteReuseStrategy {
       const bRoute = bRoutes[index];
       const equal = aRoute.routeConfig === bRoute.routeConfig;
       if (!equal) return false;
-      const paramMapKey = aRoute.data.paramMapKey;
-      if (paramMapKey) {
-        return aRoute.paramMap.get(paramMapKey) === bRoute.paramMap.get(paramMapKey);
+      const reuseParamKey = aRoute.data.reuseParamKey;
+      if (reuseParamKey) {
+        return aRoute.paramMap.get(reuseParamKey) === bRoute.paramMap.get(reuseParamKey);
       } else {
         return true;
       }
